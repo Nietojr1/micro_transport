@@ -140,8 +140,6 @@ export default {
         //     return this.userId.name
         // },
 
-
-
         addVehicle(){
             this.titleModal = 'Add new Vehicle';
             this.newVehicle = {

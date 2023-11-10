@@ -5,8 +5,6 @@ namespace App\Services;
 use App\Models\Dataresponse;
 use App\Models\User;
 use Illuminate\Http\Request;
-
-
 class UserService
 {
 

@@ -7,10 +7,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\CardBrandController;
+use App\Http\Controllers\ExportDataController;
 
 Route::view('/', 'welcome');
 Route::view('users', 'users');
 Route::view('vehicle', 'vehicle');
+Route::view('reports', 'report');
 
 
 Auth::routes(['verify' => true]);
@@ -32,6 +34,9 @@ Route::post('vehicleNew',           [VehicleController::class, 'vehicleNew']);
 
 
 Route::get('getAllBrand',           [CardBrandController::class, 'allBrand']);
+
+Route::get('allDataExport',         [ExportDataController::class, 'allDataToExport']);
+
 
 
 

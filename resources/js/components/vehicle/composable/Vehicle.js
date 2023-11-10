@@ -40,7 +40,10 @@ export default function useVehicles() {
     const postNewVehicle = async (dataCard) => {
         try {
 
+            console.log(dataCard);
             const response = await axios.post(`vehicleNew`, dataCard);
+
+            console.log(response.data);
 
             newVehicle.value = response.data;
 

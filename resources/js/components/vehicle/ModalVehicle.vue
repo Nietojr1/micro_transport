@@ -34,7 +34,7 @@
                                     required
                                     v-model="VehicleNew.owner_id"
                                 >
-                                    <option v-for="option in allUserByRole"
+                                    <option v-for="option in allUsers"
                                         :key="option.id"
                                         :value="option.id">
                                         {{ option.first_name + ' '+ option.last_name }}
@@ -51,7 +51,7 @@
                                     required
                                     v-model="VehicleNew.driver_id"
                                 >
-                                    <option v-for="option in allUserByRole"
+                                    <option v-for="option in allUsers"
                                         :key="option.id"
                                         :value="option.id">
                                         {{ option.first_name + ' '+ option.last_name }}
@@ -84,7 +84,7 @@
                                     id="plate"
                                     placeholder="###-###"
                                     required
-                                    v-model="VehicleNew.id_card"
+                                    v-model="VehicleNew.plate"
                                 />
                             </div>
                             <div class="form-group">

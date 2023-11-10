@@ -11,7 +11,7 @@ import "primeflex/primeflex.css";
 import ExampleComponent from './components/ExampleComponent.vue';
 import TableUser from './components/User/TableUser.vue';
 import TableVehicle from './components/vehicle/TableVehicle.vue'
-
+import ExportData from './components/Reports/ExportData.vue';
 
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
@@ -39,6 +39,7 @@ app.directive('tooltip', Tooltip);
 app.component('example-component', ExampleComponent);
 app.component('TableUser', TableUser);
 app.component('TableVehicle', TableVehicle);
+app.component('ExportData', ExportData);
 app.use(PrimeVue, { ripple: true });
 
 app.mount('#app');
