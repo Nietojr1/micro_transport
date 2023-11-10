@@ -33,10 +33,6 @@
                 @yield('content')
             </div>
         </div>
-
-        <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
-        <script src="{{ asset('js/plugins/bootstrap.bundle.js') }}"></script>
-        <script src="{{ asset('js/adminlte.min.js') }}"></script>
     </div>
 </body>
 

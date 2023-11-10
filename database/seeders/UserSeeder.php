@@ -16,10 +16,12 @@ class UserSeeder extends Seeder
             'first_name' => 'Jose',
             'middle_name' => 'Rogelio',
             'last_name' => 'Nieto Prada',
+            'address' => 'Av. 3 #5-23',
             'email' => 'roger@gmail.com',
             'phone' => '3132400767',
             'city' => 'Cúcuta',
             'password' => bcrypt('123456789'),
+            'email_verified_at' => now(),
         ]);
 
         User::create([
@@ -28,10 +30,12 @@ class UserSeeder extends Seeder
             'first_name' => 'Silvana',
             'middle_name' => 'Paola',
             'last_name' => 'Patiño Ramon',
+            'address' => 'Av.6 #4-32 Apto 202',
             'email' => 'silvana@gmail.com',
             'phone' => '3111425367',
             'city' => 'Bogota',
             'password' => bcrypt('123456789'),
+            'email_verified_at' => now(),
         ]);
 
 

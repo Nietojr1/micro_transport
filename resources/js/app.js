@@ -2,33 +2,43 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
-/**
- * Next, we will create a fresh Vue application instance. You may then begin
- * registering components with the application instance so they are ready
- * to use in your application's views. An example is included for you.
- */
+import PrimeVue from "primevue/config";
+import "primevue/resources/themes/saga-orange/theme.css"
+import "primevue/resources/primevue.min.css";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
+
+import ExampleComponent from './components/ExampleComponent.vue';
+import TableUser from './components/User/TableUser.vue';
+import TableVehicle from './components/vehicle/TableVehicle.vue'
+
+
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import Button from 'primevue/button';
+import SelectButton from 'primevue/selectbutton';
+import InputText from 'primevue/inputtext';
+import InputNumber from 'primevue/inputnumber';
+import Tag from 'primevue/tag';
+import Tooltip from 'primevue/tooltip';
 
 const app = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
+app.use(PrimeVue)
+
+app.component('DataTable', DataTable);
+app.component('Column', Column);
+app.component('Button', Button);
+app.component('SelectButton', SelectButton);
+app.component('InputText', InputText);
+app.component('InputNumber', InputNumber)
+app.component('Tag', Tag);
+app.directive('tooltip', Tooltip);
+
+
 app.component('example-component', ExampleComponent);
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
-//     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
-// });
-
-/**
- * Finally, we will attach the application instance to a HTML element with
- * an "id" attribute of "app". This element is included with the "auth"
- * scaffolding. Otherwise, you will need to add an element yourself.
- */
+app.component('TableUser', TableUser);
+app.component('TableVehicle', TableVehicle);
+app.use(PrimeVue, { ripple: true });
 
 app.mount('#app');
