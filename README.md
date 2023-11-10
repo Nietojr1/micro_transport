@@ -42,6 +42,7 @@
    php artisan serve
    npm run dev
 
+Note: Check the seeder created by the users accessing the app.
 
 ## Usage
 
